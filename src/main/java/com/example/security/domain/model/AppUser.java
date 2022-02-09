@@ -17,8 +17,8 @@ public class AppUser {
     @Column(name = "name", nullable = false, length = 100)
     private String name;
 
-    @Column(name = "email", nullable = false, length = 100)
-    private String email;
+    @Column(name = "mail_address", nullable = false, length = 100)
+    private String mailAddress;
 
     @JsonIgnore
     @Column(name = "password", nullable = false)
@@ -44,12 +44,12 @@ public class AppUser {
         this.name = name;
     }
 
-    public String getEmail() {
-        return email;
+    public String getMailAddress() {
+        return mailAddress;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public void setMailAddress(String mailAddress) {
+        this.mailAddress = mailAddress;
     }
 
     public String getPassword() {

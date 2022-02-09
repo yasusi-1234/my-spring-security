@@ -14,9 +14,12 @@ public class Card {
     @Column(name = "card_number", nullable = false, length = 100)
     private String cardNumber;
 
-    @ManyToOne(optional = false)
-    @JoinColumn(name = "app_user_id", nullable = false)
-    private AppUser appUser;
+//    @ManyToOne(optional = false)
+//    @JoinColumn(name = "app_user_id", nullable = false)
+//    private AppUser appUser;
+
+    @Column(name = "app_user_id", nullable = false)
+    private Long appUserId;
 
     @Column(name = "total_limit", nullable = false)
     private Long totalLimit;
@@ -46,12 +49,21 @@ public class Card {
         this.cardNumber = cardNumber;
     }
 
-    public AppUser getAppUser() {
-        return appUser;
+//    public AppUser getAppUser() {
+//        return appUser;
+//    }
+//
+//    public void setAppUser(AppUser appUser) {
+//        this.appUser = appUser;
+//    }
+
+
+    public Long getAppUserId() {
+        return appUserId;
     }
 
-    public void setAppUser(AppUser appUser) {
-        this.appUser = appUser;
+    public void setAppUserId(Long appUserId) {
+        this.appUserId = appUserId;
     }
 
     public Long getTotalLimit() {
