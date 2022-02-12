@@ -30,6 +30,8 @@ public class SampleUsernamePasswordAuthenticationProvider implements Authenticat
     @Override
     public Authentication authenticate(Authentication authentication) throws AuthenticationException {
 
+        System.out.println("call class: " + this.getClass().getSimpleName());
+
         String username = authentication.getName();
         String password = authentication.getCredentials().toString();
 
